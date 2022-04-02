@@ -1,13 +1,16 @@
 {
   "name": "app",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": "Maryucha M. Mariani",
+  "License": "MIT",
+  "repository": "https://github.com/Maryucha/QuizAngular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "compodoc": "npx compodoc -p tsconfig.app.json -n \"Quiz 1.0 Documentation Technical\" --theme postmark"
+    "compodoc": "npx compodoc -p tsconfig.doc.json -n \"Quiz 1.0 Documentation Technical\" --theme postmark"
   },
   "private": true,
   "dependencies": {

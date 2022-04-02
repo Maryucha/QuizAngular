@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="title has-text-danger has-text-centered">WELCOME TO QUIZ APP</h2>
+    <br><br>
+    <h3 class="title has-text-primary has-text-centered">Player</h3>
+    <div class="form-container">
+        <form [formGroup]="formPlayer" (ngSubmit)="onSubmit()">
+                <label class="mr-3" for="player">Name</label>
+                <input class="input #player is-rounded" formControlName="playerControl" type="text"
+                    placeholder="Your name here">
+                <input class="button is-primary ml-3" type="submit" value="Start quiz">
+        </form>
+    </div>
+</div>

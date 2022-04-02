@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="is-flex is-justify-content-space-between p-3">
+        <div class="image">
+            <img src="./../../../../assets/logos/quiz.png" alt="quiz logo" width="90">
+        </div>
+        <div class="quiz-header">
+            <h4>General Questions</h4>
+            Welcome <span class="has-text-primary is-size-5"> {{player}}</span>
+        </div>
+    </div>
+    <div class="is-flex is-justify-content-space-between p-3">
+        <div class="score">
+            <h5>10 Points</h5>
+        </div>
+        <div class="question-remain">
+            <span class="is-italic">Question 1 of 10</span>
+        </div>
+        <div class="timer">
+            60 seconds ⏱️
+        </div>
+    </div>
+
+    <progress class="progress is-primary" value="10" max="100">10%</progress>
+    <div class="question">
+        <h3>Whats your name?</h3>
+    </div>
+    <div class="options">
+        <ol>
+            <li class="message is-info p-3">Maryucha</li>
+            <li class="message is-info p-3">Joana</li>
+            <li class="message is-info p-3">Paloma</li>
+            <li class="message is-info p-3">Marina</li>
+        </ol>
+    </div>
+    <div class="is-flex is-justify-content-space-between p-5">
+        <i class="button is-primary">
+            <span class="material-icons">
+                arrow_back_ios
+            </span>
+        </i>
+        <i class="button is-info">
+            <span class="material-icons">
+                refresh
+            </span>
+        </i>
+        <i class="button is-primary">
+            <span class="material-icons">
+                arrow_forward_ios
+            </span>
+        </i>
+    </div>
+</div>

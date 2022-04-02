@@ -1,0 +1,20 @@
+<div  class="container">
+    <h1 class="subtitle has-text-centered has-text-primary is-3" mat-dialog-title>RULES</h1>
+    <mat-dialog-content>
+        <p class="subtitle has-text-centered has-text-info">This quiz will conatins total 10 questions. Each question holds 10 points.</p>
+
+        <ul>
+            <li class="has-text-centered">Correct question gives you 10 points.</li>
+            <li class="has-text-centered">Inorrect question gives to you -10 points.</li>
+            <li class="has-text-centered">You will have 30 seconds to answer each question.</li>
+            <li class="has-text-centered">Refrash the page will reset the quiz.</li>
+        </ul>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="mt-5">
+      <button class="button is-danger mr-3" mat-dialog-close>Cancel</button>
+      <button class="button is-primary" [mat-dialog-close]="true" cdkFocusInitial>Understend</button>
+    </mat-dialog-actions>
+</div>
+
+
+

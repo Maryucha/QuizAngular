@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,800,900');
+@import "../node_modules/bulma/bulma.sass";
+
+html{
+    background-image: url('./assets/background/bg-main.svg');
+    background-size: cover;
+    
+    overflow: auto !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

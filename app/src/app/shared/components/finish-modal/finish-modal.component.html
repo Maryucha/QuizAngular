@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="subtitle has-text-centered {{className}} is-3" mat-dialog-title>{{modalMsg}}</h1>
+    <mat-dialog-content>
+        <p class="subtitle has-text-centered has-text-info">You fish this quiz whith {{data.points}} points</p>
+        <img class="has-centered" [src]="imgModal" alt="win-image">
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="mt-5">
+      <button class="button is-primary p-1" [mat-dialog-close]="true" cdkFocusInitial>CLOSE</button>
+    </mat-dialog-actions>
+</div>
+
+
+

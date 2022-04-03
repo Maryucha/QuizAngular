@@ -10,43 +10,40 @@
     </div>
     <div class="is-flex is-justify-content-space-between p-3">
         <div class="score">
-            <h5>10 Points</h5>
+            <h5>{{points}} Points</h5>
         </div>
         <div class="question-remain">
-            <span class="is-italic">Question 1 of 10</span>
+            <span class="is-italic">Question {{currentQuestion+1}} of 10</span>
         </div>
         <div class="timer">
-            60 seconds ⏱️
+            {{counter}} seconds ⏱️
         </div>
     </div>
 
-    <progress class="progress is-primary" value="10" max="100">10%</progress>
+    <progress class="progress is-primary" value={{points}} max="100">{{points}}%</progress>
     <div class="question">
-        <h3>Whats your name?</h3>
+        <h3>{{questionList[currentQuestion]?.questionText}}</h3>
     </div>
     <div class="options">
-        <ol>
-            <li class="message is-info p-3">Maryucha</li>
-            <li class="message is-info p-3">Joana</li>
-            <li class="message is-info p-3">Paloma</li>
-            <li class="message is-info p-3">Marina</li>
+        <ol *ngFor="let option of questionList[currentQuestion]?.options">
+            <li class="message is-info p-3" (click)="answer(currentQuestion+1,option)">{{option.text}}</li>
         </ol>
     </div>
     <div class="is-flex is-justify-content-space-between p-5">
-        <i class="button is-primary">
+        <button class="button is-primary" (click)="previousQuestion()" [disabled]="currentQuestion===0">
             <span class="material-icons">
                 arrow_back_ios
             </span>
-        </i>
-        <i class="button is-info">
+        </button>
+        <button class="button is-info" (click)="refreshQuiz()">
             <span class="material-icons">
                 refresh
             </span>
-        </i>
-        <i class="button is-primary">
+        </button>
+        <button class="button is-primary" (click)="nextQuestion()" [disabled]="currentQuestion>=10">
             <span class="material-icons">
                 arrow_forward_ios
             </span>
-        </i>
+        </button>
     </div>
 </div>

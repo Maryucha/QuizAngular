@@ -2,22 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ErrorComponent } from './components/error/error.component';
 import { ModalComponent } from './components/modal/modal.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { FinishModalComponent } from './components/finish-modal/finish-modal.component';
 
 @NgModule({
   declarations: [
     ErrorComponent,
-    ModalComponent
+    ModalComponent,
+    FinishModalComponent
   ],
   imports: [
     CommonModule,
     MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    HttpClientModule,
   ],
   exports: [
     ErrorComponent,
@@ -25,7 +28,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FinishModalComponent
   ]
 })
 export class SharedModule { }
